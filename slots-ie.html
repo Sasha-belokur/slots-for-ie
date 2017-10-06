@@ -4,13 +4,361 @@
   <meta charset="UTF-8">
   <title>Document</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,900&amp;subset=cyrillic" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="style/style.css">
+  <!--<link rel="stylesheet" type="text/css" href="style/style.css">-->
+  <style>
+html,
+body {
+  min-width: 1024px;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 18px;
+  background-color: #000000;
+}
+
+a > img {
+  border: none;
+}
+
+.container {
+  width: 984px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.clearfix {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.header {
+  min-height: 50px;
+  margin-bottom: 25px;
+  background-color: #062a61;
+}
+
+.main-logo {
+  width: 192px;
+  height: 33px;
+  float: left;
+  margin-top: 14px;
+}
+
+.main-navigation {
+  float: left;
+  margin-left: 42px;
+}
+
+.main-navigation ul {
+  margin: 0;
+  padding: 0;
+  margin-top: 28px;
+  font-size: 0;
+  list-style: none;
+}
+
+.main-navigation li {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.main-navigation li:first-child {
+  margin-right: 40px;
+}
+
+.main-navigation a {
+  position: relative;
+  color: #ffffff;
+  font-size: 16px;;
+  font-weight: 400;
+  line-height: 21px;
+  text-decoration: none;
+}
+
+.main-navigation a:hover:after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #f5a623;
+}
+
+.main-title {
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 36px;
+}
+
+.introduction {
+  margin-bottom: 62px;
+}
+
+.chart-header {
+  margin-bottom: 10px;
+}
+
+.advantages {
+  float: left;
+  width: 780px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.advantages p {
+  margin: 0;
+}
+
+.advantages-item {
+  padding: 0 10px;
+  border-right: 1px solid #ffffff;
+}
+
+.advantages-item:first-child {
+  padding-left: 0;
+}
+
+.advantages-item:last-child {
+  border-right: none;
+}
+
+.disclaimer {
+  position: relative;
+  float: right;
+  width: 200px;
+  text-align: right;
+}
+
+.disclaimer-link {
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+.disclaimer-container {
+  position: absolute;
+  z-index: 9999;
+  width: 293px;
+  height: auto;
+  background-color: #fff;
+  box-shadow: 0 0 6px rgb(4,5,5);
+  padding: 14px;
+  top: 30px;
+  left: -140px;
+  text-align: left;
+  color: #000000;
+}
+
+.chart-table-header {
+  height: 33px;
+  background-color: #124da8;
+}
+
+.chart-table-header div {
+  display: table-cell;
+  padding-top: 8px;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.bookmaker {
+  width: 230px;
+}
+
+.sign-up-bonus {
+  width: 265px;
+  font-weight:500;
+}
+
+.user-rating {
+  width: 170px;
+}
+
+.our-score {
+  width: 135px;
+}
+
+.visit-site {
+  width: 184px;
+}
+
+.chart-table-row {
+  height: 130px;
+  color: #212121;
+  background-color: #ffffff;
+}
+
+.chart-table-row.even {
+  background-color: #efefef;
+}
+
+.chart-table-row div {
+  display: table-cell;
+  text-align: center;
+  vertical-align: top;
+}
+
+.chart-table-row .bookmaker {
+  padding: 16px 0;
+}
+
+.chart-table-row .sign-up-bonus {
+  padding-top: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.sign-up-bonus p {
+  margin: 0;
+}
+
+.sign-up-bonus .label {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+}
+
+.chart-table-row .user-rating {
+  padding-top: 26px;
+}
+
+.user-rating .stars {
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.user-rating .read-review {
+  color: #0288d1;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.chart-table-row .our-score {
+  vertical-align: middle;
+  color: #2aaff7;
+  font-size: 64px;
+  font-weight: 500;
+}
+
+.chart-table-row .visit-site {
+  padding-top: 35px;
+}
+
+.btn-cta {
+  display: inline-block;
+  margin-bottom: 5px;
+  width: 155px;
+  height: 39px;
+  padding-top: 5px;
+  padding-bottom: 9px;
+  color: #212121;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 39px;
+  text-decoration: none;
+  background-color: #e8b51b;
+}
+
+.btn-cta:hover {
+  background-color: #ffe91a;
+}
+
+.visit-site .parner-link {
+  display: inline-block;
+  color: #0288d1;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.content-below-chart h2 {
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.content-below-chart p {
+  margin: 0;
+}
+
+.content-below-chart ul {
+  margin: 0;
+  padding: 0;
+  padding-left: 25px;
+}
+
+.content-below-chart li {
+  padding-left: 10px;
+}
+
+.footer {
+  margin-top: 30px;
+  padding: 10px 0;
+  background-color: #4d4d4d;
+}
+
+.footer-navigation,
+.external-links {
+  text-align: center;
+}
+
+.footer-navigation ul,
+.external-links ul {
+  padding: 0;
+  font-size: 0;
+  list-style: none;
+  display: inline-block;
+}
+
+.footer-navigation li,
+.external-links li {
+  display: inline-block;
+}
+
+.footer-navigation a {
+  padding: 0 5px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  text-decoration: none;
+  border-right: 1px solid #ffffff;
+}
+
+.external-links li {
+  margin-right: 10px;
+}
+
+.external-links .social {
+  margin-right: 4px;
+}
+
+.footer-copyright p {
+  text-align: center;
+  margin: 0;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+}
+  </style>
 </head>
 <body>
   <div class="header">
     <div class="container clearfix">
       <div class="main-logo">
-        <a href="#"><img src="img/main-logo.png" width="192" height="33"></a>
+        <a href="#"><img src="http://boost-assets-staging.s3-website-eu-west-1.amazonaws.com/assets/general/7725/main-logo.png" width="192" height="33"></a>
       </div>
       <div class="main-navigation">
         <ul>
@@ -39,8 +387,8 @@
           </p>
         </div>
         <div class="disclaimer">
-          <a class="disclaimer-link" href="#">Adversiter Disclosure</a>
-          <div class="disclaimer-container">
+          <a class="disclaimer-link">Adversiter Disclosure</a>
+          <div class="disclaimer-container" style="display: none;">
             <h3>Advertiser Disclosure</h3>
             <p>
               This site is a free online resource that strives to offer helpful content and comparison features
@@ -65,34 +413,39 @@
         <div class="visit-site">Visit Site</div>
       </div>
       <div class="chart-table-body">
+        {#ordered_products}
+        {@lt key=$idx value=10}
         <div class="chart-table-row">
           <div class="bookmaker">
-            <img src="img/casumo-logo.png" width="208" height="93">
+            <a class="nilink" target="_blank" rel="nofollow" href='{@featureById name="Product Link" feature_id="57751d2c785877788c00357a"/}' data-product-id="{id}">
+              <img src='{@featureById name="Product image - topRated" feature_id="5887483f5d819c00129b03ab"/}' width="208" height="93">
+            </a>
           </div>
           <div class="sign-up-bonus">
             <span class="label">Sign Up Bonus<br></span>
-            200% First Deposit Bonus<br>
-            +200 Free Spins
+            {@featureById name="biz-dev bonus free text" feature_id="58ca437e44da580018c2011b"/}
           </div>
           <div class="user-rating">
-            <span>Rate it (534 votes)</span>
+            <span>Rate it ({@featureById name="Current Number of Votes" feature_id="5774ee36785877788600299b" data="current_number_of_votes"/})</span>
             <div class="stars">            
-              <img src="img/star-on.png">
-              <img src="img/star-on.png">
-              <img src="img/star-on.png">
-              <img src="img/star-on.png">
-              <img src="img/star-on.png">
-            </div> <br>
-            <a class="read-review" href="#reviews">Read Review</a>
+              <img src="http://boost-assets-staging.s3-website-eu-west-1.amazonaws.com/assets/general/7716/star-on.png">
+              <img src="http://boost-assets-staging.s3-website-eu-west-1.amazonaws.com/assets/general/7716/star-on.png">
+              <img src="http://boost-assets-staging.s3-website-eu-west-1.amazonaws.com/assets/general/7716/star-on.png">
+              <img src="http://boost-assets-staging.s3-website-eu-west-1.amazonaws.com/assets/general/7716/star-on.png">
+              <img src="http://boost-assets-staging.s3-website-eu-west-1.amazonaws.com/assets/general/7716/star-on.png">
+            </div><br>
+            <a class="read-review" href='{@featureById name="review-link" feature_id="59a90939e54ef200151215b8"/}'>Read Review</a>
           </div>
           <div class="our-score">
-            9.8
+            {@featureById name="Editor Score" feature_id="5774ee3678587778860029b0" data="editor_score"/}
           </div>
           <div class="visit-site">
-            <a class="btn-cta" href="#partner">Get Bonus</a>
-            <a class="parner-link" href="partner">Visit Casumo</a>
+            <a class="btn-cta nilink" target="_blank" rel="nofollow" href='{@featureById name="Product Link" feature_id="57751d2c785877788c00357a"/}' data-product-id="{id}">Get Bonus</a>
+            <a class="parner-link nilink" target="_blank" rel="nofollow" href='{@featureById name="Product Link" feature_id="57751d2c785877788c00357a"/}' data-product-id="{id}">Visit Casumo</a>
           </div>
         </div>
+        {/lt}
+        {/ordered_products}
       </div>
     </div>
     <div class="content-below-chart">
@@ -154,5 +507,22 @@
       </div>
     </div> 
   </div>
+  <script type="text/javascript">
+    u.execWhenReadyPoller(function(){
+      $(".chart-table-row:odd").addClass("even");
+      var disclaimer = document.querySelector('.disclaimer-link');
+      var disclaimerContainer = document.querySelector('.disclaimer-container');
+
+      disclaimer.attachEvent("onclick", function(event) {
+        event.preventDefault();
+        if (disclaimerContainer.style.display === 'none') {
+          disclaimerContainer.style.display = 'block';
+        } else {
+          disclaimerContainer.style.display = 'none';
+        }
+      })
+    }, u.poller('jquery'));
+
+  </script>
 </body>
 </html>
